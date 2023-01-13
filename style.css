@@ -1,3 +1,106 @@
 :root {
-    --font-primary: ;
+    --ff-primary: 'Montserrat', sans-serif;
+    --ff-accent: 'Fraunces', serif;
+
+    --clr-primary: hsl(158, 36%, 37%);
+    --clr-primary-dark: hsl(158, 36%, 15%);
+    --clr-secondary: hsl(30, 38%, 92%);
+
+    --clr-neutral-900: hsl(212, 21%, 14%);
+    --clr-neutral-400: hsl(228, 12%, 48%);
+    --clr-neutral-100: hsl(0, 0%, 100%);       
+}
+
+* {
+    margin: 0;
+}
+
+p,
+h1 {
+    overflow-wrap: break-word;
+}
+
+html,
+body{
+    height: 100%;
+}
+
+body {
+    background-color: var(--clr-secondary);
+    font-family: var(--ff-primary);
+    font-size: 0.875rem;
+    color: var(--clr-neutral-400);
+    padding: 1rem;
+    display: grid;
+    place-content: center;
+    line-height: 1.7;
+}
+
+.product {
+    background-color: var(--clr-neutral-100);
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.product-content {
+    padding: 1.5rem;
+    display: grid;
+    gap: 1rem;
+}
+
+.product-category {
+    letter-spacing: 5px;
+}
+
+.product-title {
+    font-family: var(--ff-accent);
+    font-weight: bolder;
+    font-size: 2rem;
+    color: var(--clr-neutral-900);
+    line-height: 1;
+
+}
+
+.price-box {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.price {
+    font-family: var(--ff-accent);
+    font-size: 2rem;
+    color: var(--clr-primary);
+}
+
+.button {
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    gap: .725rem;
+    justify-content: center;
+    align-items: center;
+    padding: 0.725rem 1.5rem;
+    border: 0;
+    border-radius: 0.5rem;
+
+    background-color: var(--clr-primary);
+    color: var(--clr-neutral-100);
+}
+
+.button[data-icon="shopping-cart"]::before {
+    content: "";
+    background: url("images/icon-cart.svg");
+    width: 15px;
+    height: 16px;
+}
+
+.button:is(:hover, :focus) {
+    background-color: var(--clr-primary-dark);
 }
